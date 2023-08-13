@@ -1,0 +1,23 @@
+{
+  "name": "democypress",
+  "version": "1.0.0",
+  "description": "Test practice with CyPress",
+  "main": "index.js",
+  "scripts": {
+    "cy": "npx cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DarlynCR/DemoCyPress.git"
+  },
+  "author": "DarlynCR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarlynCR/DemoCyPress/issues"
+  },
+  "homepage": "https://github.com/DarlynCR/DemoCyPress#readme",
+  "devDependencies": {
+    "cypress": "^12.17.3"
+  }
+}
