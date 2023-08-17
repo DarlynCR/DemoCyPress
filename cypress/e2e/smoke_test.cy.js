@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
 
 
-describe('Test Suite Zerro Bakn - Home Page', () => {
+describe('Test Suite Zerro Bakn, () => {
 
-    it('Test Home Image', () => {
+    it('TC1 - Test Home Image', () => {
 
         cy.visit('http://zero.webappsecurity.com')
         cy.get('.active > img').should('be.visible')
@@ -11,7 +11,7 @@ describe('Test Suite Zerro Bakn - Home Page', () => {
       
     })
 
-    it('Test E2E - Transfer of founds ', () => {
+    it('TC2 - Test E2E - Transfer of founds ', () => {
         
         cy.visit('http://zero.webappsecurity.com')
         cy.get('#signin_button').click()
@@ -27,11 +27,17 @@ describe('Test Suite Zerro Bakn - Home Page', () => {
         cy.get('#btn_submit').click()
         cy.get('.alert').contains("You successfully submitted your transaction.")
 
-
-    
-
-   
-
-
     })
+
+    it.only('TC3 - Test E2E - Validate interacción with money map', () => {
+        
+        cy.visit('http://zero.webappsecurity.com');
+        cy.get('#signin_button').click()
+        cy.get('#user_login').type("username")
+        cy.get('#user_password').type("password")
+        cy.get('.btn').click()
+        cy.get('#money_map_tab > a').click()
+        cy.get('#ext-sprite-1275').should("be.visible")
+
+    });
 })
