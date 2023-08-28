@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Test practice with CyPress",
   "main": "index.js",
-  "scripts": {
+  "scripts": { 
     "cy": "npx cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-h-edge":"cypress run --spec cypress/e2e/smoke_test.cy.js --browser edge"
+    
   },
   "repository": {
     "type": "git",
